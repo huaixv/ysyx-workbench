@@ -1,7 +1,8 @@
 # Usage
 #
 # 1. Include this Makefile in your project Makefile
-# 2. Use `$(call git_commit, "commit message")` to commit changes
+# 2. Add `$(call git_commit, "commit message")` to your target
+# 3. Run `make` and take a look at your tracer branch
 
 TRACER_BRANCH = auto-tracer # Change it to any name you like :)
 GITFLAGS = -q --author='auto-tracer <auto-tracer@saves.me>' --no-verify --allow-empty
