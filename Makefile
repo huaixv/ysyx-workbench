@@ -1,16 +1,10 @@
-STUID = ysyx_22040000
-STUNAME = 张三
-
-# DO NOT modify the following code!!!
-
-TRACER = tracer-ysyx
-GITFLAGS = -q --author='$(TRACER) <tracer@ysyx.org>' --no-verify --allow-empty
+TRACER_BRANCH = auto-tracer # Change it to any name you like :)
+GITFLAGS = -q --author='auto-tracer <auto-tracer@saves.me>' --no-verify --allow-empty
 
 # PROJ_HOME is set to the dir of this Makefile by default, modify this if necessary
 PROJ_HOME = $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 WORK_BRANCH = $(shell git rev-parse --abbrev-ref HEAD)
 WORK_INDEX = $(PROJ_HOME)/.git/index.$(WORK_BRANCH)
-TRACER_BRANCH = $(TRACER)
 
 LOCK_DIR = $(PROJ_HOME)/.git/
 
