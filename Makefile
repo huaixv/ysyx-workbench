@@ -4,11 +4,15 @@
 # 2. Add `$(call git_commit, "commit message")` to your target
 # 3. Run `make` and take a look at your tracer branch
 
-TRACER_BRANCH = auto-tracer # Change it to any name you like :)
-GITFLAGS = -q --author='auto-tracer <auto-tracer@saves.me>' --no-verify --allow-empty
-
+## Configuration
+#
 # PROJ_HOME is set to the dir of this Makefile by default, modify this if necessary
 PROJ_HOME = $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
+# TRACER_BRANCH will be the branch name, change it to any name you like :)
+TRACER_BRANCH = auto-tracer
+# GITFLAGS is the flags for git commit, without commit message
+GITFLAGS = -q --author='auto-tracer <auto-tracer@saves.me>' --no-verify --allow-empty
+
 WORK_BRANCH = $(shell git rev-parse --abbrev-ref HEAD)
 WORK_INDEX = $(PROJ_HOME)/.git/index.$(WORK_BRANCH)
 
