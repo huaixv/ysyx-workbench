@@ -1,4 +1,4 @@
-# Usage
+## Usage
 #
 # 1. Include this Makefile in your project Makefile
 # 2. Add `$(call git_commit, "commit message")` to your target
