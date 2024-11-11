@@ -39,7 +39,4 @@ endef
 .clean_index:
 	rm -f $(WORK_INDEX)
 
-_default:
-	@echo "Please run 'make' under subprojects."
-
-.PHONY: .git_commit .clean_index _default
+.PHONY: .git_commit .clean_index
